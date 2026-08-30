@@ -17,3 +17,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 this repo contains the source code for the crispy trible project
+
+
+tech stack
+
+React, vite
