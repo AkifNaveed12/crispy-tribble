@@ -25,8 +25,8 @@ const Navbar = () => {
                     type="text"
                     name='search'
                     onChange={(event) => setSearchParam(event.target.value)}
-                    placeholder="Enter Items..."
-                    className='bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-200 focus:shadow-red-300 focus:ring-2 focus:ring-red-200'
+                    placeholder="What are you craving?"
+                    className='bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 border border-orange-100 shadow-lg focus:shadow-red-300 focus:ring-2 focus:ring-orange-100 duration-300'
                     />
             </form>
 

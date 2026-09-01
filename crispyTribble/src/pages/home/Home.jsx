@@ -14,7 +14,7 @@ const Home = () => {
         <>
             {
                 recipeList && recipeList.length > 0 ?
-                <div className='py-8 max-w-[1400px] mx-auto flex flex-wrap justify-center gap-10'>
+                <div className='py-8 max-w-1400px mx-auto flex flex-wrap justify-center gap-10'>
                     {
                         recipeList.map((item) => 
                             <RecipeItem item={item} key={item.id}/>
@@ -30,14 +30,14 @@ const Home = () => {
                 >
 
                     {/* Overlay */}
-                    <div className='absolute inset-0 bg-white/65'></div>
+                    <div className='absolute inset-0 bg-linear-to-r from-white/40 via-white/20 to-white/10 '></div>
 
                     {/* Content */}
-                    <div className='relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-12'>
+                    <div className='relative z-10 max-w-1400px mx-auto w-full px-6 lg:px-12'>
                         
                         <div className='max-w-2xl'>
 
-                            <span className='text-sm font-semibold tracking-[0.25em] uppercase text-orange-700'>
+                            <span className='text-sm font-extrabold tracking-[0.3em] uppercase text-orange-700'>
                                 Discover · Cook · Enjoy
                             </span>
 
@@ -48,7 +48,7 @@ const Home = () => {
                                 </span>
                             </h1>
 
-                            <p className='mt-7 max-w-xl text-lg md:text-xl leading-relaxed text-gray-700'>
+                            <p className='mt-7 max-w-xl text-lg md:text-xl leading-relaxed text-orange-700'>
                                 Explore recipes worth making, discover new flavors,
                                 and find something delicious for every craving.
                             </p>
