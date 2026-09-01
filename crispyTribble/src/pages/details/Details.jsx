@@ -37,6 +37,31 @@ return (
         />
         </div>
     </div>
+    <div className="flex flex-col gap-3">
+        <span className='text-sm text-cyan-700 font-medium'>{recipeDetailsData?.recipe?.publisher}</span>
+        <h3 className='font-bold text-2xl truncate text-black'>{recipeDetailsData?.recipe?.title}</h3>
+
+        <div>
+            <button
+            className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block bg-black text-white"
+            >Save as favorites</button>
+            <br /> 
+            <br />
+            <span className="text-2xl font-extrabold text-black mt-4 mb-4">Ingredients:</span>
+            <ul className="flex flex-col gap-3">
+                {
+                    recipeDetailsData?.recipe?.ingredients.map((ingredient) => <li key={ingredient.id}>
+                        <span className="text-2xl font-medium text-black p-2">
+                            {ingredient.quantity} {ingredient.unit}
+                            </span>
+                        <span className="text-2xl font-light text-black">
+                            {ingredient.description}
+                            </span>
+                    </li> )
+                }
+            </ul>
+        </div>
+    </div>
     </div>
 );
 };
