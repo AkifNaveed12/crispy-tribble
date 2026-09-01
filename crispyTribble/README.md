@@ -15,6 +15,13 @@ A modern recipe discovery web application built with React and Tailwind CSS. Cri
 - Client-side routing with React Router
 - Recipe data powered by the Forkify API
 
+## Demo
+
+
+
+https://github.com/user-attachments/assets/3ff68061-163f-4f79-bd33-e1ec9787ad24
+
+
 ## Tech Stack
 
 ### Frontend
