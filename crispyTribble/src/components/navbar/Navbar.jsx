@@ -13,8 +13,8 @@ const Navbar = () => {
             <h2 className='text-2xl font-semibold'>
                 <NavLink 
                     to={'/'} 
-                    className='text-lack hover:text-gray-700 duration-300'>
-                        FoodRecipe 
+                    className='text-lack text-orange-700 font-extrabold hover:text-gray-700 duration-300'>
+                        CrispyTribble 
                     </NavLink>
             </h2>
 
