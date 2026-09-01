@@ -9,18 +9,64 @@ const Home = () => {
     if(loading){
         return <div>Loading...Please wait!</div>
     }
-    
 
     return (
-        <div className='py-8 max-w-[1400px] mx-auto flex flex-wrap justify-center gap-10'>
+        <>
             {
                 recipeList && recipeList.length > 0 ?
-                recipeList.map((item) => <RecipeItem item={item}  key={item.id}/>)
-                : <div>
-                    <p className='lg:text-4xl text-xl text-center text-black font-extrabold'>Nothing to show! Please Search Something</p>
+                <div className='py-8 max-w-[1400px] mx-auto flex flex-wrap justify-center gap-10'>
+                    {
+                        recipeList.map((item) => 
+                            <RecipeItem item={item} key={item.id}/>
+                        )
+                    }
                 </div>
+                :
+                <section 
+                    className='relative min-h-[calc(100vh-180px)] flex items-center overflow-hidden bg-cover bg-center'
+                    style={{
+                        backgroundImage: "url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=2000&q=85')"
+                    }}
+                >
+
+                    {/* Overlay */}
+                    <div className='absolute inset-0 bg-white/65'></div>
+
+                    {/* Content */}
+                    <div className='relative z-10 max-w-[1400px] mx-auto w-full px-6 lg:px-12'>
+                        
+                        <div className='max-w-2xl'>
+
+                            <span className='text-sm font-semibold tracking-[0.25em] uppercase text-orange-700'>
+                                Discover · Cook · Enjoy
+                            </span>
+
+                            <h1 className='mt-5 text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-gray-900'>
+                                Good food starts with a{' '}
+                                <span className='text-orange-700'>
+                                    great recipe.
+                                </span>
+                            </h1>
+
+                            <p className='mt-7 max-w-xl text-lg md:text-xl leading-relaxed text-gray-700'>
+                                Explore recipes worth making, discover new flavors,
+                                and find something delicious for every craving.
+                            </p>
+
+                            <div className='mt-8 flex items-center gap-4'>
+                                <span className='h-px w-12 bg-orange-700'></span>
+
+                                <span className='text-sm font-medium tracking-wide text-gray-600'>
+                                    Search above to find your next favorite dish
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
             }
-        </div>
+        </>
     );
 }
 
