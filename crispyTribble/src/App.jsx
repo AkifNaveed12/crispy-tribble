@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import {Routes, Route} from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
@@ -7,7 +6,6 @@ import Details from './pages/details/Details'
 import Favorite from './pages/favorites/Favorites'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
